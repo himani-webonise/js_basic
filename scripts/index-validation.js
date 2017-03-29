@@ -45,6 +45,7 @@ function nameLengthValidator() {
 		console.log("true");
 		return true;
 	} else {
+		
 		var errorMsg = "Enter valid firstname and lastname";
 		alert(errorMsg);
 		var error = document.getElementById('error');
