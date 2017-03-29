@@ -40,24 +40,24 @@ function nameLengthValidator() {
 	
 	let minName = 3;
 	let maxName = 15;
-
-	if (validate(firstName, minName, maxName) && validate(lastName, minName, maxName)) {
-		console.log("true");
+			 
+	debugger;
+	
+	if (validate(firstName, minName, maxName) && validate(lastName, minName, maxName)) {		
+		document.getElementById("form1").action="html/succes.html";		 
 		return true;
-	} else {
-		
+	} else {		
 		var errorMsg = "Enter valid firstname and lastname";
-		alert(errorMsg);
+		console.log(errorMsg);
 		var error = document.getElementById('error');
-		error.innerHTML = errorMsg;
-		reloadCurrentPage();		
+		error.innerText = errorMsg;
+			
 	}	
 }
 
 function validate(value, min, max) {
 	var valueLength = value.length
-	console.log(valueLength)
-	if (valueLength <= min && valueLength >= max) {
+	if (valueLength >= min && valueLength <= max) {
 		return true;
 	}
 	return false;
